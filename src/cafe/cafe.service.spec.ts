@@ -29,8 +29,8 @@ describe('CafeService', () => {
     for(let i = 0; i < 5; i++){
         const cafe: CafeEntity = await repository.save({
         nombre: faker.company.name(), 
-        direccion: faker.address.streetAddress(),
-        telefono: faker.phone.number()})
+        descripcion: "asdjnas",
+        precio: 12000,})
         cafesList.push(cafe);
     }
   }
@@ -44,6 +44,8 @@ describe('CafeService', () => {
     const cafe: CafeEntity = {
       id: "",
       nombre: faker.company.name(), 
+      descripcion: "asdjnas",
+      precio: 12000,
       tiendas: []
     }
 
