@@ -11,7 +11,7 @@ export class TiendaService {
         private readonly tiendaRepository: Repository<TiendaEntity>
     ){}
 
-    async createCafe(tienda: TiendaEntity): Promise<TiendaEntity> {
+    async createTienda(tienda: TiendaEntity): Promise<TiendaEntity> {
         if (tienda.telefono.length < 10)
             throw new BusinessLogicException("El telefono debe tener más de 10 caracteres.", BusinessError.PRECONDITION_FAILED);
         return await this.tiendaRepository.save(tienda);
